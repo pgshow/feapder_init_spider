@@ -2,7 +2,7 @@
 """
 Created on 2022-08-02 15:14:55
 ---------
-@summary:
+@summary: Requests code demo
 ---------
 @author: abc
 """
@@ -17,8 +17,10 @@ from items.spider_data import PgSpiderDataItem
 SpiderName = 'ChinaNews'
 
 
+# class Chinanews(feapder.BaseParser): # 如使用爬虫集成模式，则需要继承 BaseParser
 class Chinanews(feapder.Spider):
     __custom_setting__ = dict(
+        LOG_PATH=f"log/%s.log" % SpiderName,
         PROXY_ENABLE=False,
     )
 

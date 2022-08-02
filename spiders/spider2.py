@@ -2,7 +2,7 @@
 """
 Created on 2022-08-02 15:14:55
 ---------
-@summary:
+@summary: Selenium code demo
 ---------
 @author: abc
 """
