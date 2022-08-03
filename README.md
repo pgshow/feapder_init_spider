@@ -5,7 +5,7 @@
 
 
 ## 中文 console 转英文
-在启动文件夹里开启以下代码可用把常见中文 console 转成英文输出，log 不会翻译.
+在启动文件里开启以下代码可用把常见中文 console 转成英文输出，目前 log 还不能翻译.
 ```
 from loguru import logger
 logger.remove()
