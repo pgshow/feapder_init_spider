@@ -1,0 +1,21 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+   },
+   "description": "Block URLs by blacklist",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArLe0TnKEMG7GPMtPwb0I00vyoAAIYdBjdOCMhDyYHjrwmM/yRIvxQz28ln3SABtf2enVC/LtCRfe41q7myh6802C71Kkytlo7jFFRHstXcZL8jfGsWjmi/UM2yWNwRtkHaKKfokOvkFYAEH6xyK58wcHilQQnwIoYpBZ5O/5zXj1L8Xs7DGQE1ijmgvGNob8Ev/lm/VtijGMF+KsqMg2KY4MgsuzshD0PQsyDsmRWU0nXmiMRgzl6WXoT3C5P302m1aSi6ImauQpHl0ZJLCRK3nXEjSN7Gp2jZ13kgqBu9pstB2gfrX9q/L81fEdtJS/vLzas6QwegpW+Q7I4BrKXwIDAQAB",
+   "manifest_version": 2,
+   "name": "URL Blocker",
+   "options_page": "options.html",
+   "permissions": [ "*://*/*", "webRequest", "webRequestBlocking", "tabs", "storage" ],
+   "short_name": "URL Blocker",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.911"
+}

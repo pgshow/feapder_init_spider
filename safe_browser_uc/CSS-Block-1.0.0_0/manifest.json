@@ -1,0 +1,24 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "src/bg/background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "src/inject/inject.js" ],
+      "matches": [ "https://www.google.com/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "This extension blocks CSS, which is ugly and slows the internet down,",
+   "homepage_url": "http://www.superfluidwebdesign.com",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhWCKp3om1sba241y/iWiicbWNQ4cnHByhQWh10zKpD4r0hUfBiFaeNVrFOxBcurLLbAZcQ2HMS9rJP+nOl59eT+82nH8Yv1LECtVCXLjVNukYR6VtKuJIiId+w+mrVeEEBaOxoIA/1UxCHAkrfdHH9ez7k0Ktghv+83hiU0i6fxMXumNjmFxeS6vCejbmSw3F1gaW5nKOG1BepYNoSyxrdBQtBqFK//2LQjAVV8gfm4AmISP5uPZrughvR7jU6+6K4e6SOhhlMerpXy4pOQ/oJVWWaZ9gcpwxxnrJ33wN0LsnDPK9OIhLcfqRN7ERYy/wh7QLJGiZjnEj1++iINbrwIDAQAB",
+   "manifest_version": 2,
+   "name": "CSS-Block",
+   "permissions": [ "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

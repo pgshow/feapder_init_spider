@@ -32,11 +32,11 @@ class Baidu(feapder.Spider):
         # 浏览器渲染
         WEBDRIVER=dict(
             pool_size=1,  # 浏览器的数量
-            load_images=False,  # 是否加载图片
+            load_images=True,  # 是否加载图片
             user_agent=None,  # 字符串 或 无参函数，返回值为user_agent
             proxy=None,  # xxx.xxx.xxx.xxx:xxxx 或 无参函数，返回值为代理地址
             headless=False,  # 是否为无头浏览器
-            driver_type="FIREFOX",  # CHROME 、PHANTOMJS、FIREFOX
+            driver_type="CHROME",  # CHROME 、PHANTOMJS、FIREFOX
             timeout=60,  # 请求超时时间
             window_size=(1920, 1080),  # 窗口大小
             executable_path=None,  # 浏览器路径，默认为默认路径
@@ -73,15 +73,15 @@ class Baidu(feapder.Spider):
 
 
 if __name__ == "__main__":
-    Baidu(redis_key=f"scraper:{SpiderName}", auto_start_requests=True, keep_alive=True, thread_count=1, delete_keys=True).start()
+    # Baidu(redis_key=f"scraper:{SpiderName}", auto_start_requests=True, keep_alive=True, thread_count=1, delete_keys=True).start()
 
-    # # Debug
-    # spider = Baidu.to_DebugSpider(
-    #     redis_key=f"scraper:{SpiderName}",
-    #     request=feapder.Request(
-    #         url="https://baijiahao.baidu.com/s?id=1739712336071253570&wfr=spider&for=pc",
-    #         callback=Baidu.article_parse,
-    #         render=True,
-    #     ),
-    # )
-    # spider.start()
+    # Debug
+    spider = Baidu.to_DebugSpider(
+        redis_key=f"scraper:{SpiderName}",
+        request=feapder.Request(
+            url="https://baijiahao.baidu.com/s?id=1739712336071253570&wfr=spider&for=pc",
+            callback=Baidu.article_parse,
+            render=True,
+        ),
+    )
+    spider.start()
