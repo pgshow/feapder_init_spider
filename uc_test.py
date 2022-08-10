@@ -31,4 +31,5 @@ def get_real_path():
 
 if __name__ == '__main__':
     path = mk_chrome_tmp_folder()
+    path = 'launch'
     print(path)
