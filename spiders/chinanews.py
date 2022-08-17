@@ -84,12 +84,15 @@ if __name__ == "__main__":
 
     Chinanews(redis_key=f"scraper:{SpiderName}", auto_start_requests=True, keep_alive=True, thread_count=1).start()
 
-    # # Debug
+    # Debug
+    # extra_data = Dict()
+    # # extra_data.title = 'test title1'
     # spider = Chinanews.to_DebugSpider(
     #     redis_key=f"scraper:{SpiderName}",
     #     request=feapder.Request(
     #         url="https://www.chinanews.com.cn/life/2022/07-25/9811922.shtml",
-    #         callback=Chinanews.article_parse
+    #         callback=Chinanews.article_parse,
+    #         extra=extra_data,
     #     )
     # )
     # spider.start()
