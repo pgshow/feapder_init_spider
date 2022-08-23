@@ -20,8 +20,10 @@ SpiderName = 'ChinaNews'
 # class Chinanews(feapder.BaseParser): # 如使用爬虫集成模式，则需要继承 BaseParser
 class Chinanews(feapder.Spider):
     __custom_setting__ = dict(
-        LOG_PATH=f"log/%s.log" % SpiderName,
         PROXY_ENABLE=False,
+        LOG_IS_WRITE_TO_FILE=False,
+        LOG_PATH=f"log/{SpiderName}/log.log",
+        # SPIDER_SLEEP_TIME=[5, 10],
     )
 
     def start_requests(self):
