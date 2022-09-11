@@ -9,6 +9,7 @@ Created on 2022-08-02 15:14:55
 import sys
 import cn2en
 import feapder
+import setting
 
 from addict import Dict
 from feapder.utils.log import log
@@ -28,6 +29,11 @@ class Chinanews(feapder.Spider):
 
     def start_requests(self):
         yield feapder.Request("https://www.chinanews.com.cn/scroll-news/news1.html", filter_repeat=False)  # 首页
+
+    def download_midware(self, request):
+        if setting.PROXY_TUNNEL_ENABLE:
+            request.proxies = setting.PROXY_TUNNEL
+        return request
 
     def parse(self, request, response):
         try:
